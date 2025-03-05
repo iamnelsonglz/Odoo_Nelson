@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Action -->
+        <record id="nelson_employee_category_action" model="ir.actions.act_window">
+            <field name="name">Employee Category</field>
+            <field name="res_model">nelson.employee.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="nelson_employee_category_submenu"
+            name="Employee Category"
+            parent="nelson_configuration_menu" 
+            sequence="902"
+            action="nelson_employee_category_action"
+        />
+
+        <!-- Search View -->
+        <record id="nelson_employee_category_search_view" model="ir.ui.view">
+            <field name="name">nelson.employee.category.search</field>
+            <field name="model">nelson.employee.category</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="priority"/>
+
+                    <!-- Filter -->
+                    <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+                    <filter string="Is secretary" name="is_secretary" domain="[('is_secretary', '=', True)]"/>
+                    <filter string="Is leader" name="is_leader" domain="[('is_leader', '=', True)]"/>
+                    <filter string="Is administator" name="is_administrator" domain="[('is_administrator', '=', True)]"/>
+
+                    <!-- Group -->
+                    <group expand="0" string="Group By">
+                        <filter string="Priority" name="priority" context="{'group_by':'priority'}"/>
+                        <filter string="Active" name="active" context="{'group_by':'active'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="nelson_employee_category_tree_view" model="ir.ui.view">
+            <field name="name">nelson.employee.category.tree</field>
+            <field name="model">nelson.employee.category</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Category">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="priority"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="nelson_employee_category_form_view" model="ir.ui.view">
+            <field name="name">nelson.employee.category.form</field>
+            <field name="model">nelson.employee.category</field>
+            <field name="arch" type="xml">
+                <form string="Employee Category">
+                    <sheet>
+                        <group>
+                            <group string="Employee Category Information">
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="priority"/>
+                                <field name="active"/>
+                            </group>
+                            <group string="Employee Category Type">
+                                <field name="is_secretary"/>
+                                <field name="is_leader"/>
+                                <field name="is_administrator"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <group>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="activity_ids" widget="mail_activity"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

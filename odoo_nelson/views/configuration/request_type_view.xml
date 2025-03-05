@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Action -->
+        <record id="nelson_request_type_action" model="ir.actions.act_window">
+            <field name="name">Request Type</field>
+            <field name="res_model">nelson.request.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="nelson_request_type_submenu"
+            name="Request Type"
+            parent="nelson_configuration_menu" 
+            sequence="903"
+            action="nelson_request_type_action"
+        />
+
+        <!-- Search View -->
+        <record id="nelson_request_type_search_view" model="ir.ui.view">
+            <field name="name">nelson.request.type.search</field>
+            <field name="model">nelson.request.type</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="priority"/>
+
+                    <!-- Filter -->
+                    <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+
+                    <!-- Group -->
+                    <group expand="0" string="Group By">
+                        <filter string="Priority" name="priority" context="{'group_by':'priority'}"/>
+                        <filter string="Active" name="active" context="{'group_by':'active'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="nelson_request_type_tree_view" model="ir.ui.view">
+            <field name="name">nelson.request_type.tree</field>
+            <field name="model">nelson.request.type</field>
+            <field name="arch" type="xml">
+                <tree string="Request Type">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="priority"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="nelson_request_type_form_view" model="ir.ui.view">
+            <field name="name">nelson.request.type.form</field>
+            <field name="model">nelson.request.type</field>
+            <field name="arch" type="xml">
+                <form string="Request Type">
+                    <sheet>
+                        <group>
+                            <group string="Request Type Information">
+                                <field name="name"/>
+                                <field name="description"/>
+                            </group>
+                            <group string="Request Type Configuration">
+                                <field name="priority"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <group>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="activity_ids" widget="mail_activity"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

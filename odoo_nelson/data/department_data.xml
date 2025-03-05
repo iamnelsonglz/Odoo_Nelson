@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="management_nelson_department_data" model="nelson.department">
+            <field name="name">General Manegement</field>
+            <field name="description">General Management in dependence</field>
+            <field name="floor_number">0</field>
+            <field name="active">True</field>
+        </record>
+        <record id="computer_nelson_department_data" model="nelson.department">
+            <field name="name">Computer Area</field>
+            <field name="description">Computer Area in dependence</field>
+            <field name="floor_number">0</field>
+            <field name="active">True</field>
+        </record>
+        <record id="hr_nelson_department_data" model="nelson.department">
+            <field name="name">Human Relations</field>
+            <field name="description">Human Relations in dependence</field>
+            <field name="floor_number">0</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Action -->
+        <record id="nelson_department_action" model="ir.actions.act_window">
+            <field name="name">Department</field>
+            <field name="res_model">nelson.department</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="nelson_department_submenu"
+            name="Department"
+            parent="nelson_configuration_menu" 
+            sequence="901"
+            action="nelson_department_action"
+        />
+
+        <!-- Search View -->
+        <record id="nelson_department_search_view" model="ir.ui.view">
+            <field name="name">nelson.department.search</field>
+            <field name="model">nelson.department</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="floor_number"/>
+
+                    <!-- Filter -->
+                    <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+
+                    <!-- Group -->
+                    <group expand="0" string="Group By">
+                        <filter string="Floor Number" name="floor_number" context="{'group_by': 'floor_number'}"/>
+                        <filter string="Is active" name="active" context="{'group_by': 'active'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="nelson_department_tree_view" model="ir.ui.view">
+            <field name="name">nelson.department.tree</field>
+            <field name="model">nelson.department</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="floor_number"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="nelson_department_form_view" model="ir.ui.view">
+            <field name="name">nelson.department.form</field>
+            <field name="model">nelson.department</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group string="Department Info">
+                                <field name="name"/>
+                                <field name="description"/>
+                            </group>
+                            <group string="Other Info">
+                                <field name="floor_number"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <group>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="activity_ids" widget="mail_activity"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

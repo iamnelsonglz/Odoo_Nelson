@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_nelson_department_administrator,nelson.department,model_nelson_department,admin_nelson_group,1,1,1,1
+access_nelson_employee_category_administrator,nelson.employee.category,model_nelson_employee_category,admin_nelson_group,1,1,1,1
+access_nelson_request_type_administrator,nelson.request.type,model_nelson_request_type,admin_nelson_group,1,1,1,1
+access_nelson_employee_administrator,nelson.employee,model_nelson_employee,admin_nelson_group,1,1,1,1

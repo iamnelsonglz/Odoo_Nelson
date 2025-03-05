@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Action -->
+        <record id="nelson_employee_action" model="ir.actions.act_window">
+            <field name="name">Employee</field>
+            <field name="res_model">nelson.employee</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="nelson_employee_submenu"
+            name="Employee"
+            parent="nelson_configuration_menu" 
+            sequence="904"
+            action="nelson_employee_action"
+        />
+
+        <!-- Search View -->
+        <record id="nelson_employee_search_view" model="ir.ui.view">
+            <field name="name">nelson.employee.search</field>
+            <field name="model">nelson.employee</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="employee_category_id"/>
+                    <field name="department_id"/>
+
+                    <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="In active" name="active" domain="[('active', '=', False)]"/>
+
+                    <group expand="0" string="Group By">
+                        <filter string="Employee Category" name="employee_category_id" context="{'group_by':'employee_category_id'}"/>
+                        <filter string="Department" name="department_id" context="{'group_by':'department_id'}"/>
+                        <filter string="Active" name="active" context="{'group_by':'active'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="nelson_employee_tree_view" model="ir.ui.view">
+            <field name="name">nelson.employee.tree</field>
+            <field name="model">nelson.employee</field>
+            <field name="arch" type="xml">
+                <tree string="Employee">
+                    <field name="employee_id"/>
+                    <field name="employee_category_id"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="nelson_employee_form_view" model="ir.ui.view">
+            <field name="name">nelson.employee.form</field>
+            <field name="model">nelson.employee</field>
+            <field name="arch" type="xml">
+                <form string="Employee">
+                    <sheet>
+                        <group>
+                            <field name="employee_id" options="{'no_create_edit': 1, 'no_open' : True}"/>
+                            <field name="employee_category_id" options="{'no_create_edit': 1, 'no_open' : True}"/>
+                            <field name="department_id" options="{'no_create_edit': 1, 'no_open' : True}"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

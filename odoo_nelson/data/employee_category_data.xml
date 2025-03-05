@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="administrator_nelson_employee_category_data" model="nelson.employee.category">
+            <field name="name">Administrator</field>
+            <field name="description">System Administrator</field>
+            <field name="priority">0</field>
+            <field name="active">True</field>
+            <field name="is_secretary">False</field>
+            <field name="is_leader">False</field>
+            <field name="is_administrator">True</field>
+        </record>
+        <record id="computer_nelson_employee_category_data" model="nelson.employee.category">
+            <field name="name">Computer Assistant</field>
+            <field name="description">Computer assistant to attend to requests</field>
+            <field name="priority">0</field>
+            <field name="active">True</field>
+            <field name="is_secretary">False</field>
+            <field name="is_leader">False</field>
+            <field name="is_administrator">False</field>
+        </record>
+        <record id="director_nelson_employee_category_data" model="nelson.employee.category">
+            <field name="name">General Director</field>
+            <field name="description">General director in the dependence</field>
+            <field name="priority">1</field>
+            <field name="active">True</field>
+            <field name="is_secretary">False</field>
+            <field name="is_leader">True</field>
+            <field name="is_administrator">False</field>
+        </record>
+        <record id="leader_nelson_employee_category_data" model="nelson.employee.category">
+            <field name="name">Departure Leader</field>
+            <field name="description">Departure Leader</field>
+            <field name="priority">2</field>
+            <field name="active">True</field>
+            <field name="is_secretary">False</field>
+            <field name="is_leader">True</field>
+            <field name="is_administrator">False</field>
+        </record>
+        <record id="secretary_nelson_employee_category_data" model="nelson.employee.category">
+            <field name="name">Secretary or Assistant</field>
+            <field name="description">Secretary or Assistant</field>
+            <field name="priority">3</field>
+            <field name="active">True</field>
+            <field name="is_secretary">True</field>
+            <field name="is_leader">False</field>
+            <field name="is_administrator">False</field>
+        </record>
+        <record id="employee_nelson_employee_category_data" model="nelson.employee.category">
+            <field name="name">Employee</field>
+            <field name="description">Employee</field>
+            <field name="priority">4</field>
+            <field name="active">True</field>
+            <field name="is_secretary">False</field>
+            <field name="is_leader">False</field>
+            <field name="is_administrator">False</field>
+        </record>
+    </data>
+</odoo>

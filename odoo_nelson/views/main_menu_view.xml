@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Main menu -->
+        <menuitem id="nelson_main_menu"
+            name="Nelson Odoo"
+            web_icon="odoo_nelson,static/description/ic_launcher.png" 
+            sequence="90"
+        />
+
+        <!-- Menu -->
+        <menuitem id="nelson_configuration_menu"
+            name="Configuration"
+            parent="nelson_main_menu" 
+            sequence="900"
+        />
+    </data>
+</odoo>

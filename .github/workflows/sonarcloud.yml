@@ -32,7 +32,7 @@ jobs:
             -Dsonar.projectKey=iamnelsonglz_Odoo_Nelson
             -Dsonar.organization=iamnelsonglz
             -Dsonar.sources=.
-            -Dsonar.tests=tests # Paths for test files
+            # -Dsonar.tests=tests # Paths for test files
             -Dsonar.python.version=3.8 # Python version
             -Dsonar.verbose=true
           projectBaseDir: .

@@ -15,3 +15,6 @@ class NelsonEmployee(models.Model):
     employee_category_id = fields.Many2one('nelson.employee.category', string='Employee Category', required=True, help='Employee Category')
     department_id = fields.Many2one('nelson.department', string='Department', required=True, help='Department')
     active = fields.Boolean(string='Active', default=True, help='Active')
+
+    # def test(self):
+    #     print('Test')

@@ -31,9 +31,15 @@ jobs:
           args: >
             -Dsonar.projectKey=iamnelsonglz_Odoo_Nelson
             -Dsonar.organization=iamnelsonglz
+            -Dsonar.projectName=Odoo_Nelson
+            -Dsonar.projectVersion=0.0.1
+            -Dsonar.projectDescription="Proyecto de modulo personalizado en Odoo 13"
+            -Dsonar.projectTags=odoo13,python3,xml
+            -Dsonar.languages=py,js,xml
             -Dsonar.sources=.
-            # -Dsonar.tests=tests # Paths for test files
-            -Dsonar.python.version=3.8 # Python version
             -Dsonar.verbose=true
+            -Dsonar.sourceEncoding=UTF-8
+            -Dsonar.python.version=3.8 # Python version
+            # -Dsonar.tests=tests # Paths for test files
+            
           projectBaseDir: .
-

@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odoo_nelson
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: es\n"
+"plural-forms: nplurals=2; plural=(n != 1);"
+
+#. module: odoo_nelson
+#: model:ir.ui.menu,name:odoo_nelson.nelson_configuration_menu
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: odoo_nelson
+#: model:ir.ui.menu,name:odoo_nelson.nelson_department_submenu
+#: model:ir.actions.act_window,name:odoo_nelson.nelson_department_action
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department
+msgid "Department"
+msgstr "Departamento"
+
+#. module: odoo_nelson
+#: model_terms:ir.actions.act_window,help:odoo_nelson.nelson_department_action
+msgid "This model is used for managing departments."
+msgstr "Este modelo se utiliza para administrar departamentos."
+
+#. module: odoo_nelson
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_department__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_department__name
+msgid "Department name"
+msgstr "Nombre del departamento"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_department__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_department__description
+msgid "Department description"
+msgstr "Descripción del departamento"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_department__floor_number
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_department__floor_number
+msgid "Floor Number"
+msgstr "Número de piso"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_department__active
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_search_view
+msgid "Active"
+msgstr "Activo"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_department__active
+msgid "Check if the department is active"
+msgstr "Indicador si el departamento está activo"
+
+#. module: odoo_nelson
+#: model:ir.model.constraint,message:odoo_nelson.constraint_nelson_department_name_unique
+msgid "The department name must be unique"
+msgstr "El nombre del departamento debe ser único"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_search_view
+msgid "Inactive"
+msgstr "Inactivo"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_search_view
+msgid "Floor Number"
+msgstr "Número de piso"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_search_view
+msgid "Is active"
+msgstr "Está activo"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_form_view
+msgid "Department Info"
+msgstr "Información del departamento"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_form_view
+msgid "Other Info"
+msgstr "Otra información"

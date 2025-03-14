@@ -17,6 +17,9 @@ msgstr "Configuración"
 #: model:ir.ui.menu,name:odoo_nelson.nelson_department_submenu
 #: model:ir.actions.act_window,name:odoo_nelson.nelson_department_action
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee__department_id
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee__department_id
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_search_view
 msgid "Department"
 msgstr "Departamento"
 
@@ -62,6 +65,9 @@ msgstr "Número de piso"
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_search_view
 #: model:ir.model.fields,field_description:odoo_nelson.field_nelson_request_type__active
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_request_type_search_view
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee__active
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee__active
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_search_view
 msgid "Active"
 msgstr "Activo"
 
@@ -79,6 +85,7 @@ msgstr "El nombre del departamento debe ser único"
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_search_view
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_search_view
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_request_type_search_view
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_search_view
 msgid "Inactive"
 msgstr "Inactivo"
 
@@ -106,6 +113,9 @@ msgstr "Otra información"
 #: model:ir.ui.menu,name:odoo_nelson.nelson_employee_category_submenu
 #: model:ir.actions.act_window,name:odoo_nelson.nelson_employee_category_action
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee__employee_category_id
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee__employee_category_id
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_search_view
 msgid "Employee Category"
 msgstr "Categoría de empleado"
 
@@ -237,5 +247,23 @@ msgstr "Configuración del tipo de solicitud"
 
 #. module: odoo_nelson
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_request_type_search_view
+msgid "Request Type Configuration"
+msgstr "Configuración del tipo de solicitud"
+
+#. module: odoo_nelson
+#: model:ir.ui.menu,name:odoo_nelson.nelson_employee_submenu
+#: model:ir.actions.act_window,name:odoo_nelson.nelson_employee_action
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee__employee_id
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee__employee_id
+msgid "Employee ID"
+msgstr "ID del empleado"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_search_view
 msgid "Request Type Configuration"
 msgstr "Configuración del tipo de solicitud"

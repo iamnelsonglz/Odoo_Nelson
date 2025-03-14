@@ -27,7 +27,7 @@
                     <field name="department_id"/>
 
                     <filter string="Active" name="active" domain="[('active', '=', True)]"/>
-                    <filter string="In active" name="active" domain="[('active', '=', False)]"/>
+                    <filter string="Inactive" name="active" domain="[('active', '=', False)]"/>
 
                     <group expand="0" string="Group By">
                         <filter string="Employee Category" name="employee_category_id" context="{'group_by':'employee_category_id'}"/>

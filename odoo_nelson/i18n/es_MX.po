@@ -27,6 +27,7 @@ msgstr "Este modelo se utiliza para administrar departamentos."
 
 #. module: odoo_nelson
 #: model:ir.model.fields,field_description:odoo_nelson.field_nelson_department__name
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee_category__name
 msgid "Name"
 msgstr "Nombre"
 
@@ -37,6 +38,7 @@ msgstr "Nombre del departamento"
 
 #. module: odoo_nelson
 #: model:ir.model.fields,field_description:odoo_nelson.field_nelson_department__description
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee_category__description
 msgid "Description"
 msgstr "Descripción"
 
@@ -54,6 +56,8 @@ msgstr "Número de piso"
 #. module: odoo_nelson
 #: model:ir.model.fields,field_description:odoo_nelson.field_nelson_department__active
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_search_view
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee_category__active
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_search_view
 msgid "Active"
 msgstr "Activo"
 
@@ -69,6 +73,7 @@ msgstr "El nombre del departamento debe ser único"
 
 #. module: odoo_nelson
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_search_view
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_search_view
 msgid "Inactive"
 msgstr "Inactivo"
 
@@ -91,3 +96,96 @@ msgstr "Información del departamento"
 #: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_department_form_view
 msgid "Other Info"
 msgstr "Otra información"
+
+#. module: odoo_nelson
+#: model:ir.ui.menu,name:odoo_nelson.nelson_employee_category_submenu
+#: model:ir.actions.act_window,name:odoo_nelson.nelson_employee_category_action
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category
+msgid "Employee Category"
+msgstr "Categoría de empleado"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee_category__name
+msgid "Employee category name"
+msgstr "Nombre de la categoría del empleado"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee_category__description
+msgid "Employee category description"
+msgstr "Descripción de la categoría del empleado"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee_category__priority
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee_category__priority
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee_category__active
+msgid "Check if the employee category is active"
+msgstr "Indicador si la categoría del empleado está activa"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee_category__is_secretary
+msgid "Is Secretary or Assistant"
+msgstr "Es secretario/a o asistente"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee_category__is_secretary
+msgid "Check if the employee category is a secretary or an assistant"
+msgstr "Indicador si la categoría del empleado es secretario/a o asistente"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee_category__is_leader
+msgid "Is Leader"
+msgstr "Es líder"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee_category__is_leader
+msgid "Check if the employee category is a leader"
+msgstr "Indicador si la categoría del empleado es líder / encargado / jefe"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,field_description:odoo_nelson.field_nelson_employee_category__is_administrator
+msgid "Is Administrator"
+msgstr "Es administrador"
+
+#. module: odoo_nelson
+#: model:ir.model.fields,help:odoo_nelson.field_nelson_employee_category__is_administrator
+msgid "Check if the employee category is an administrator"
+msgstr "Indicador si la categoría del empleado es administrador"
+
+#. module: odoo_nelson
+#: model:ir.model.constraint,message:odoo_nelson.nelson_employee_category_name_unique
+msgid "The employee category name must be unique"
+msgstr "El nombre de la categoría del empleado debe ser único"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_form_view
+msgid "Employee Category Information"
+msgstr "Información de la categoría del empleado"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_form_view
+msgid "Employee Category Type"
+msgstr "Tipo de categoría del empleado"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_search_view
+msgid "Is secretary"
+msgstr "Es secretario/a"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_search_view
+msgid "Is leader"
+msgstr "Es líder"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_search_view
+msgid "Is administator"
+msgstr "Es administrador"
+
+#. module: odoo_nelson
+#: model_terms:ir.ui.view,arch_db:odoo_nelson.nelson_employee_category_search_view
+msgid "Priority"
+msgstr "Prioridad"
